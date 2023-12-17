@@ -1,0 +1,17 @@
+frontend proxypublic
+    mode http
+    bind *:80
+    acl regle1 hdr(host) site1.tgplus.net
+    acl regle2 hdr(host) site2.tgplus.net
+    use_backend site1 if regle1
+    use_backend site2 if regle2
+
+backend site1
+    mode http
+    option httpchk
+    server web1 192.168.100.4
+backend site2
+    mode http
+    option httpchk
+    server web2 192.168.100.5
+
