@@ -17,8 +17,8 @@ echo "Installation terminée."
 
 #LXC
 #Décompression de ubuntu16
-echo -e "\nDécompression du cache ubuntu16"
-tar -xzf cache/ubuntu16.tar.gz -C /var/cache/lxc/
+#echo -e "\nDécompression du cache ubuntu16"
+#tar -xzf cache/ubuntu16.tar.gz -C /var/cache/lxc/
 
 #Fichier lxc-net
 echo -e 'USE_LXC_BRIDGE="true"\nLXC_ADDR="192.168.100.254"\nLXC_NETWORK="192.168.100.0/24"\nLXC_DHCP_RANGE="192.168.100.1,192.168.100.10"' >/etc/default/lxc-net
